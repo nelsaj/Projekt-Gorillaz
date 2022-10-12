@@ -1,0 +1,125 @@
+body{
+    margin: 50px;
+    background-image: url(media/Gorillaz_desktop.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+body> div > div{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 30px;
+}
+
+div > div > header > h1{
+    font-family: Bungee Shade;
+    color: white;
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+div > div > nav{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+div > div > nav > div{
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 25px;
+    font-family: Barlow Condensed;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+div > div > nav > div:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.marked,
+.marked:hover{
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-family: Barlow Semi Condensed;
+    font-weight: bold;
+}
+
+.best{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 50px 10px 10px 10px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.album_data > div > h1 {
+    font-family: Bungee Outline;
+    color: white;
+}
+
+.album_data > div > h2 {
+    font-family: Barlow Semi Condensed;
+    color: white;
+}
+
+.album_data > div > p {
+    font-family: Barlow Condensed;
+    color: white;
+}
+
+.album_data > div > ul {
+    font-family: Barlow Condensed;
+    color: white;
+    list-style: none;
+}
+
+.cover{
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    grid-column: 2;
+
+    border-radius: 20px 20px 0 0;
+}
+
+.show_hover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.show_not_hover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.show_not_hover:hover{
+   
+}
+
+.song_list{
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content:center;
+    
+}
+
+#are_you_experienced .song_list > div {
+    background-color: #718B5C;
+    color: #a75E55;
+    border-radius: 0 0 20px 0;
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 450px;
+}
