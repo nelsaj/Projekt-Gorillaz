@@ -1,22 +1,30 @@
 body{
-    margin: 50px;
+    margin: 20px;
+    margin-bottom: 200px;
     background-image: url(media/Gorillaz_desktop.webp);
     background-position: center;
     background-size: cover;
+
+    --main-header: 70px;
+    --desktop-navigation: 25px;
+
+    --main-header-tablet: 90px;
+    --tablet-h1: 40px;
+    --tablet-p-li: 20px;
 }
 
 /* MAIN DIV + MAIN HEADER */
 
 body> div > div{
     background-color: rgba(0, 0, 0, 0.3);
-    padding: 40px;
+    padding: 30px;
     border-radius: 30px;
 }
 
 div > div > header > h1{
     font-family: "Bungee Shade";
     color: white;
-    font-size: 70px;
+    font-size: var(--main-header);
     margin-top: 0;
     margin-bottom: 70px;
 }
@@ -32,7 +40,7 @@ div > div > nav{
 div > div > nav > div{
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    font-size: 25px;
+    font-size: var(--desktop-navigation);
     font-family: "Barlow Condensed";
     border-radius: 15px;
     padding: 25px;
@@ -72,6 +80,7 @@ div > div > nav > div:hover{
     font-family: "Bungee Outline";
     color: white;
     margin: 0;
+    margin-top: 10px;
 }
 
 .album_data > div > h2 {
@@ -101,8 +110,8 @@ div > div > nav > div:hover{
     /* COVER */
 
 .cover{
-    width: 400px;
-    height: 400px;
+    width: 37vw;
+    height: 37vw;
     overflow: hidden;
     grid-column: 2;
 
@@ -113,6 +122,8 @@ div > div > nav > div:hover{
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    display: none;
 
     transition-property: ;
     transition-duration: 1s;
@@ -126,11 +137,9 @@ div > div > nav > div:hover{
     transition-property: ;
     transition-duration: 1s;
 }
-
-.cover:hover{
-   
+.show_not_hover:hover{
+    
 }
-
     /* SONG LIST */
 
 .song_list{
@@ -143,14 +152,14 @@ div > div > nav > div:hover{
 }
 
 .song_list > div{
-    flex-basis: 400px;
+    flex-basis: 37vw;
     padding: 0 10px;
     height: 200px;
 }
 
 #are_you_experienced .song_list > div{
-    background-color: #718B5C;
-    color: #a75E55;
+    background-color: #001621;
+    color: #e5ebeb;
 }
 
 #axis_bold_as_love .song_list > div{
@@ -177,7 +186,7 @@ div > div > nav > div:hover{
 
     /* ANECDOTES */
 
-.anecdotes{
+    .anecdotes{
     list-style: none;
     grid-column: 1 / span 2;
     display: grid;
@@ -186,8 +195,15 @@ div > div > nav > div:hover{
 }
 
 #are_you_experienced .anecdotes li {
-    color: #718B5C;
-    background-color: #a75E55;
+    color: #001621;
+    background-color: #e5ebeb;
+    padding: 30px;
+    font-family: "Barlow Semi Condensed";
+}
+
+#axis_bold_as_love .anecdotes li {
+    color: #CD9828;
+    background-color: #F2491E;
     padding: 30px;
     font-family: "Barlow Semi Condensed";
 }
@@ -220,13 +236,187 @@ div > div > nav > div:hover{
     grid-column: 5;
     color: white;
 
-    background-image: url(media/Demon_days.jpg);
+    background-image: url(media/damonalbarn.jpeg);
+    background-size: cover;
+    background-position: top;
+    display: grid;
+    align-content: flex-end;
+    text-shadow: 0px 0px 5px black;
 }
 
 #are_you_experienced .anecdotes li:nth-child(7){
     grid-column: 6;
 }
 
+#axis_bold_as_love .anecdotes li:nth-child(1){
+    grid-column: 1 / span 2;
+}
+
+#axis_bold_as_love .anecdotes li:nth-child(2){
+    grid-column: 3;
+}
+
+#axis_bold_as_love .anecdotes li:nth-child(5){
+    grid-column: 4 / span 2;
+    color: white;
+
+    background-image: url(media/jamiehewlett.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    align-content: flex-end;
+    text-shadow: 0px 0px 5px black;
+}
+
+#axis_bold_as_love .anecdotes li:nth-child(6){
+    grid-column: 6;
+}
+
 .empty {
     display: none;
+}
+
+/* FOOTER */
+footer{
+    font-family: "Barlow Condensed";
+    color: white;
+
+    display: grid;
+    align-content: flex-end;
+}
+
+/* 800 PX */
+
+@media (max-width: 800px){
+   
+    /* MAIN DIV + MAIN HEADER */
+    div > div > header > h1{
+        text-align: center;
+        font-size: var(--main-header-tablet);
+    }
+
+    /* NAVIGATION */
+    div > div > nav > div{
+        padding: 15px;
+    }
+
+    /* ALBUM INFO */
+
+    .best{
+        padding: 15px;
+    }
+
+    .best p, li{
+        font-size: var(--tablet-p-li);
+    }
+
+        /* TEXT INFO */
+
+        .album_data{
+            grid-column: 1 / span 2;
+        }
+        
+        .album_data > div > h1 {
+            font-size: var(--tablet-h1);
+        }
+    
+        /* COVER */
+
+        .cover{
+            grid-column: 1;
+            grid-row: 1;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .show_hover, .show_not_hover{
+            object-fit: scale-down;
+            object-position: top;
+        }
+
+        #are_you_experienced > .cover{
+            object-fit: scale-down;
+            object-position: top;
+
+            background-color: #001621;
+        }
+
+        #axis_bold_as_love > .cover{
+            object-fit: scale-down;
+            object-position: top;
+
+            background-color: #CD9828;
+        }
+
+        /* SONG LIST */
+
+        .song_list{
+            grid-column: 2;
+            grid-row: 1;
+
+            width: 32vw;
+
+            display: grid;
+        }
+
+        .song_list > div:nth-child(1) {
+            border-radius: 0 20px 0 0;
+        }
+        
+        .song_list > div:nth-child(2) {
+            border-radius: 0 0 20px 0;
+        }
+
+        .song_list > div{
+            margin-left: 10px;
+        }
+
+    /* ANECDOTES */
+    .anecdotes{
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(2, 1fr);
+
+        padding: 0;
+    }
+
+    #are_you_experienced .anecdotes li:nth-child(1){
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #are_you_experienced .anecdotes li:nth-child(3){
+        grid-column: 3 / span 2;
+        grid-row: 1;
+    }
+
+    #are_you_experienced .anecdotes li:nth-child(6){
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #are_you_experienced .anecdotes li:nth-child(7){
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    #axis_bold_as_love .anecdotes li:nth-child(1){
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    #axis_bold_as_love .anecdotes li:nth-child(2){
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    #axis_bold_as_love .anecdotes li:nth-child(5){
+        grid-column: 2 / span 2;
+        grid-row: 2;
+    }
+
+    #axis_bold_as_love .anecdotes li:nth-child(6){
+        grid-column: 4;
+        grid-row: 2;
+    }
 }
