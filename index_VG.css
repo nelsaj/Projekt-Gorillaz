@@ -1,8 +1,9 @@
 body{
     margin: 20px;
-    background-image: url(media/Gorillaz_desktop.webp);
+    background-image: url(media/Gorillaz_desktop.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 
     --main-header: 70px;
     --desktop-navigation: 25px;
@@ -11,7 +12,7 @@ body{
     --tablet-h1: 40px;
     --tablet-p-li: 2.5vw;
 
-    --main-header-phone: 75px; 
+    --main-header-phone: 14vw; 
     --phone-h1: 35px;
     --phone-h2: 25px;
     --phone-p: 4.5vw;
@@ -91,9 +92,16 @@ div > div > nav > div:hover{
 }
 
 #axis_bold_as_love .album_data > div > h1::before{
-    content: url(media/number-1-icon.png);
-    content: 10px;
-    content
+    background-image: url(media/number-1-icon.png);
+    background-size: 50px 50px;
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    content:"";
+
+    position: relative;
+    right: 50px;
+    bottom: 50px;
 }
 
 .album_data > div > h2 {
@@ -253,7 +261,7 @@ div > div > nav > div:hover{
     grid-column: 5;
     color: white;
 
-    background-image: url(media/damonalbarn.jpeg);
+    background-image: url(media/damonalbarn.jpg);
     background-size: cover;
     background-position: top;
     display: grid;
@@ -305,6 +313,11 @@ footer{
    body{
     margin-bottom: 200px;
     margin-top: 200px;
+
+    background-image: url(media/Gorillaz_tablet.jpg);
+    background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
    }
 
     /* MAIN DIV + MAIN HEADER */
@@ -448,6 +461,11 @@ footer{
 @media (max-width: 500px){
     body{
         margin: 0;
+        background-image: url(media/Gorillaz_phone.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        
     }
 
     /* MAIN DIV + MAIN HEADER */
