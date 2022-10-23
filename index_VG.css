@@ -5,35 +5,39 @@ body{
     background-size: cover;
     background-attachment: fixed;
 
-    --main-header: 7vw;
-    --desktop-navigation: 2.5vw;
-    --desktop-h1: 3vw;
-    --desktop-h2: 2vw;
-    --desktop-p: 1.3vw;
-    --desktop-li: 1.5vw;
-    --desktop-song-li: 1.2vw;
-    --desktop-song-h2: 2vw;
-    --desktop-anecdotes: 1.2vw;
+    --main: 1vw;
+    --maintwo: 1px;
+    /* Maintwo är för 900px och 1111px där det används px istället för vw*/
 
-    --main-header-tablet: 13vw;
-    --tablet-navigation: 4vw;
-    --tablet-h1: 5vw;
-    --tablet-h2: 3vw;
-    --tablet-p: 2.5vw;
-    --tablet-li: 2.5vw;
-    --tablet-song-li: 2.5vw;
-    --tablet-song-h2: 4.5vw;
-    --tablet-anecdotes: 2.5vw;
+    --main-header: calc(var(--main) * 7);
+    --desktop-navigation: calc(var(--main) * 2.5);
+    --desktop-h1: calc(var(--main) * 3);
+    --desktop-h2: calc(var(--main) * 2);
+    --desktop-p: calc(var(--main) * 1.3);
+    --desktop-li: calc(var(--main) * 1.5);
+    --desktop-song-li: calc(var(--main) * 1.2);
+    --desktop-song-h2: calc(var(--main) * 2);
+    --desktop-anecdotes: calc(var(--main) * 1.2);
 
-    --main-header-phone: 14vw; 
-    --phone-navigation: 5vw;
-    --phone-h1: 8vw;
-    --phone-h2: 5vw;
-    --phone-p: 4.5vw;
-    --phone-li: 4.5vw;
-    --phone-song-li: 3.5vw;
-    --phone-song-h2: 5vw;
-    --phone-anecdotes: 2.5vw;
+    --main-header-tablet: calc(var(--main) * 13);
+    --tablet-navigation: calc(var(--main) * 4);
+    --tablet-h1: calc(var(--main) * 5);
+    --tablet-h2: calc(var(--main) * 3);
+    --tablet-p: calc(var(--main) * 2.5);
+    --tablet-li: calc(var(--main) * 2.5);
+    --tablet-song-li: calc(var(--main) * 2.5);
+    --tablet-song-h2: calc(var(--main) * 4.5);
+    --tablet-anecdotes: calc(var(--main) * 2.5);
+
+    --main-header-phone: calc(var(--main) * 14); 
+    --phone-navigation: calc(var(--main) * 5);
+    --phone-h1: calc(var(--main) * 8);
+    --phone-h2: calc(var(--main) * 5);
+    --phone-p: calc(var(--main) * 4.5);
+    --phone-li: calc(var(--main) * 4.5);
+    --phone-song-li: calc(var(--main) * 3.5);
+    --phone-song-h2: calc(var(--main) * 5);
+    --phone-anecdotes: calc(var(--main) * 2.5);
 }
 
 /* MAIN DIV + MAIN HEADER */
@@ -67,6 +71,10 @@ div > div > nav > div{
     font-family: "Barlow Condensed";
     border-radius: 15px;
     padding: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div > div > nav > div:hover{
@@ -349,15 +357,15 @@ div > div > nav > div:hover{
 /* -------------- FONT SIZES smaller than 900px/BIGGER THAN 1111px -------------- */
 @media (min-width: 1111px){
     body{
-    --main-header-fourone: 78px;
-    --fourone-navigation: 27px;
-    --fourone-h1: 33px;
-    --fourone-h2: 22px;
-    --fourone-p: 15px;
-    --fourone-li: 17px;
-    --fourone-song-li: 15px;
-    --fourone-song-h2: 22px;
-    --fourone-anecdotes: 13px;
+    --main-header-fourone: calc(var(--maintwo) * 78);
+    --fourone-navigation: calc(var(--maintwo) * 27);
+    --fourone-h1: calc(var(--maintwo) * 33);
+    --fourone-h2: calc(var(--maintwo) * 22);
+    --fourone-p: calc(var(--maintwo) * 15);
+    --fourone-li: calc(var(--maintwo) * 17);
+    --fourone-song-li: calc(var(--maintwo) * 15);
+    --fourone-song-h2: calc(var(--maintwo) * 22);
+    --fourone-anecdotes: calc(var(--maintwo) * 13);
     }
     
     div > div > header > h1{ font-size: var(--main-header-fourone);}
@@ -373,15 +381,15 @@ div > div > nav > div:hover{
 
 @media (max-width: 900px){
     body{
-    --main-header-ninehundred: 63px;
-    --ninehundred-navigation: 22px;
-    --ninehundred-h1: 27px;
-    --ninehundred-h2: 18px;
-    --ninehundred-p: 12px;
-    --ninehundred-li: 13px;
-    --ninehundred-song-li: 12px;
-    --ninehundred-song-h2: 18px;
-    --ninehundred-anecdotes: 12px;  
+    --main-header-ninehundred: calc(var(--maintwo) * 63);
+    --ninehundred-navigation: calc(var(--maintwo) * 22);
+    --ninehundred-h1: calc(var(--maintwo) * 27);
+    --ninehundred-h2: calc(var(--maintwo) * 18);
+    --ninehundred-p: calc(var(--maintwo) * 12);
+    --ninehundred-li: calc(var(--maintwo) * 13);
+    --ninehundred-song-li: calc(var(--maintwo) * 12);
+    --ninehundred-song-h2: calc(var(--maintwo) * 18);
+    --ninehundred-anecdotes: calc(var(--maintwo) * 12);  
     }
 
     div > div > header > h1{font-size: var(--main-header-ninehundred);}
